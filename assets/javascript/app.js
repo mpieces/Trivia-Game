@@ -11,9 +11,10 @@
       ];
   
       // start the game with a score of 0.
+      // set counter variable
       var correct = 0;
       var incorrect = 0;
-      var counter = 30;
+      var counter = 45;
 
   
       // FUNCTIONS
@@ -21,10 +22,13 @@
       function startGame() {
         timer = setInterval(countDown, 1000);
         $("#sub-wrapper").prepend("<h2>Time Remaining: <span id='counter-value'>45</span> Seconds</h2>");
+        // remove start button
         $("#start").remove();
+        // loop through questions and then loop through associated answers; append input type of radio buttons to each answer
         for(var i=0; i<questions.length; i++){
             $("#quiz-area").append("<h2>" +questions[i].q +"</h2>");
             for(var j=0; j<questions[i].a.length; j++){
+                // testing
                 console.log("nested for loop")
                 $("#quiz-area").append("<input type='radio' name='question-" + i +
                 "' value='" + questions[i].a[j] + "''>" + questions[i].a[j])
@@ -32,6 +36,7 @@
         }
         $("#quiz-area").append("<button class='btn btn-primary' id='submit'>Submit</button>");
       }
+
       function countDown(){
           counter--;
           $("#counter-value").html(counter);
@@ -41,11 +46,16 @@
               checkResults();
           }
       }
+
       function checkResults(){
+          // for each checked input button, 
           $.each($("input[name='question-0']:checked"),function(){
+              // if value of checked button  = that of the correct Answer value of that question in questions array
               if($(this).val() === questions[0].correctAnswer){
+                  // increment correct variable by 1
                   correct++;
               }else{
+                  // else increment incorrect variable by 1
                   incorrect++;
               }
 
