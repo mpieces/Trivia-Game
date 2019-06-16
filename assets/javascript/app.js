@@ -3,11 +3,11 @@
 
     // The array of questions for quiz game.
     var questions = [
-        { q: "Color of the Sky?", a: ["blue","green", "yellow", "white"],correctAnswer: "blue" },
-        { q: "Color of the Sky?", a: ["blue","green", "yellow", "white"],correctAnswer: "blue" },
-        { q: "Color of the Sky?", a: ["blue","green", "yellow", "white"],correctAnswer: "blue" },
-        { q: "Color of the Sky?", a: ["blue","green", "yellow", "white"],correctAnswer: "blue" },
-        { q: "Color of the Sky?", a: ["blue","green", "yellow", "white"],correctAnswer: "blue" }
+        { q: " What brand of golf ball does George pull out of the whale's blow hole?", a: ["SportsPro","Titleist", "Taylormade", "Nike"],correctAnswer: "Titleist" },
+        { q: "In one episode Jerry agreed to wear a particular article of clothing for an interview by Bryant Gumbel on 'The Today Show.' What was it?", a: ["a green vest","a cowboy hat", "a puffy shirt", "a feather boa"],correctAnswer: "a puffy shirt" },
+        { q: "Which television star never played one of Jerry's romantic interests?", a: ["Courtney Cox","Ellen Pompeo", "Debra Messing", "Teri Hatcher"],correctAnswer: "Ellen Pompeo" },
+        { q: "On which day of the week did Jerry take over Newman's mail route?", a: ["Sunday","Monday", "Wednesday", "Friday"],correctAnswer: "Sunday" },
+        { q: "Who died from licking envelopes?", a: ["George","Kramer", "Newman", "Susan"],correctAnswer: "Susan" }
       ];
   
       // start the game with a score of 0.

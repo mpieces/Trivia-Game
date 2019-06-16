@@ -16,7 +16,7 @@ body {
 
 #sub-wrapper {
     margin-top: 50px;
-    border: 2px dashed white;
+    /* border: 2px dashed white; */
 }
 
 #sub-wrapper h2 {
@@ -24,7 +24,7 @@ body {
 }
 
 #quiz-area {
-    border: 2px dashed green;
+    /* border: 2px dashed green; */
     text-align: center;
     margin-top: 25px;
 }
