@@ -1,0 +1,46 @@
+body {
+    height: 100%;
+    background-image: url('../images/stage-bg.jpg');
+    background-size: cover;
+    color: #fff;
+}
+/* Start button */
+#start {
+
+}
+
+#wrapper h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#sub-wrapper {
+    margin-top: 50px;
+    border: 2px dashed white;
+}
+
+#sub-wrapper h2 {
+    text-align: center;
+}
+
+#quiz-area {
+    border: 2px dashed green;
+    text-align: center;
+    margin-top: 25px;
+}
+
+input[type=radio] {
+    margin: 5px 5px 10px 20px;
+    padding: 10px;
+}
+
+#submit {
+    display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+
+
+
+

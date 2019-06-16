@@ -13,14 +13,14 @@
       // start the game with a score of 0.
       var correct = 0;
       var incorrect = 0;
-      var counter = 120;
+      var counter = 30;
 
   
       // FUNCTIONS
       // ==============================================================================
       function startGame() {
         timer = setInterval(countDown, 1000);
-        $("#sub-wrapper").prepend("<h2>Time Remaining: <span id='counter-value'>120</span> Seconds</h2>");
+        $("#sub-wrapper").prepend("<h2>Time Remaining: <span id='counter-value'>45</span> Seconds</h2>");
         $("#start").remove();
         for(var i=0; i<questions.length; i++){
             $("#quiz-area").append("<h2>" +questions[i].q +"</h2>");
@@ -30,12 +30,13 @@
                 "' value='" + questions[i].a[j] + "''>" + questions[i].a[j])
             }
         }
-        $("#quiz-area").append("<button id='submit'>Submit</button>");
+        $("#quiz-area").append("<button class='btn btn-primary' id='submit'>Submit</button>");
       }
       function countDown(){
           counter--;
           $("#counter-value").html(counter);
           if(counter === 0){
+              alert("TIME'S UP!");
               console.log("TIME IS UP");
               checkResults();
           }
@@ -90,14 +91,14 @@
           $('#submit').remove();
           $('#sub-wrapper h2').remove();
           // display correct and incorrect answers
-          $("#quiz-area").html("<h2>Results Displayed Here</h2>");
+          $("#quiz-area").html("<h2>Results:</h2>");
           $("#quiz-area").append("<h3>Correct Answers: "+ correct +"</h3>");
           $("#quiz-area").append("<h3>Incorrect Answers: "+ incorrect +"</h3>");
           $("#quiz-area").append("<h3>Unanswered: " + (questions.length - (correct + incorrect)) + "</h3>");
           if(correct === questions.length) {
             alert("You scored 100%!");
           } else {
-              alert("You're a loser");
+              alert("You lose! :( wah wahhhhh");
           }
           
       }
